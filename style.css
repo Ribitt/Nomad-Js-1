@@ -1,0 +1,115 @@
+body {
+  font-family: "Martel Sans", sans-serif;
+  background-color: #34495e;
+  height: 100%;
+  width: 100%;
+}
+
+.nameForm {
+  display: none;
+}
+.showing {
+  display: block;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clock {
+  margin-top: 150px;
+  font-size: 60px;
+  height: 250px;
+  color: white;
+  opacity: 0.93;
+}
+
+.form input {
+  all: unset;
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 50px;
+  border: solid 4px #dcdde1;
+  text-align: center;
+  background-color: thistle;
+}
+
+input::placeholder {
+  font-weight: 600;
+}
+
+.greetings {
+  font-size: 45px;
+  font-weight: 900;
+  color: white;
+  opacity: 0.93;
+}
+
+.toDoList {
+  margin-top: 10px;
+}
+.toDoList li {
+  font-weight: 400;
+  font-size: 22px;
+  width: 350px;
+  display: flex;
+  justify-self: space-around;
+}
+.toDoList li span {
+  width: 150px;
+  margin-right: 10px;
+  margin-left: 5px;
+  color: white;
+  font-weight: 700;
+}
+
+.toDoList li button {
+  all: unset;
+  cursor: pointer;
+  color: #9c88ff;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.weather {
+  float: right;
+  margin-right: 70px;
+  margin-top: 50px;
+  font-weight: 800;
+  color: wheat;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgImage {
+  position: absolute;
+  background-size: auto;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+
+  z-index: -1;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@media screen and (max-width: 1024px) {
+  .bgImage {
+    left: 50%;
+    margin-left: -512px;
+  }
+}
